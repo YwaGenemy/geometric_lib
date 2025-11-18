@@ -7,9 +7,9 @@
 - $Circle: P = 2πR$
 - $Rectangle: P = 2a + 2b$
 - $Square: P = 4a$
-
 # Общее описание
  Проект реализует вычисление периметра и площади для различных геометрических фигур,  
+
 файлы реализации : `circle.py`, `rectangle.py`, `square.py`, `triangle.py`. 
 
 
@@ -28,9 +28,8 @@
 
 
 # История изменения проекта
-
 | Хеш         | Описание |
-|:-------------:|:------------------|
+|:-----------:|:---------------------------------------------|
 |`8ba9aeb`      | Реализация подсчета площади и периметра для круга и квадрата |
 |`33c0ffc`      | Добавлен подсчет для треугольника |
 |`0943e23`      | Исправление ошибки при подсчете параметров треугольника |
@@ -38,12 +37,11 @@
 
 # Изображение котят (в тему)  
 
-<img src="../assets/images/image.png" alt="тестовый котенок" width="200" height="200">
-<img src="https://cache3.youla.io/files/images/780_780/5c/0c/5c0cfbcf2aecd6b385262224.jpg" alt="второй тестовый" width="200" height="200">
-<br><br>
 
-# <span style = "color: aquamarine"> Цветной текст (в тему) </span> 
+<img src="../assets/images/image.png" width="200" height="200">
+<img src="https://cache3.youla.io/files/images/780_780/5c/0c/5c0cfbcf2aecd6b385262224.jpg" width="200" height="200">
 
+# Цветной текст (в тему)
 
-
+<span style = "color:rgba(50, 198, 159, 1)">Aqua text </span>
 
