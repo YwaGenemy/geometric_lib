@@ -17,7 +17,7 @@ jobs:
     runs-on: ${{ matrix.oper-system }}
 
     strategy:
-      fail-fast: false #если хотябы один эелмент oper-sysetm не смог запустить, то на этом не останвлаиаемся
+      fail-fast: true #если хотябы один эелмент oper-sysetm не смог запустить, то на этом не останвлаиаемся
 
       matrix:
         oper-system: [ubuntu-latest, windows-latest]
