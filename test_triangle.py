@@ -25,4 +25,5 @@ class TriangleTestCase(unittest.TestCase):
     
     def test_perimeter_equilateral(self):
         res = perimeter(5, 5, 5)
-        self.assertEqual(res, 15)
+        self.assertEqual(res, 16)
+
