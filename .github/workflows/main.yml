@@ -4,24 +4,42 @@ on:
  
   push:
     branches: [ "main", "new_features_501475"]
-    #branches: ["new_features_501475"]
 
   pull_request:
     branches: [ "main" ]
-    #branches: ["new_features_501475"]
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
+
+  tests:
+    name: Unit tests (${{ matrix.oper-system }})
+    runs-on: ${{ matrix.oper-system }}
+
+    strategy:
+      fail-fast: false #если хотябы один эелмент oper-sysetm не смог запустить, то на этом не останвлаиаемся
+
+      matrix:
+        oper-system: [ubuntu-latest, windows-latest]
       
-      - name: Run a one-line script
-        run: echo Hello, world!
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4 #git clone ...
 
-      - name: Run a multi-line script
+      - name: Set up Python
+        uses: actions/setup-python@v5 #prog language
+        with:
+          python-version: "3.x" #version language
+
+      - name: Install dependencies
+        shell: pwsh #terminal
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      
+      - name: Run unit tests
+        shell: pwsh
+        run: python -m unittest discover -v
+
+
+
